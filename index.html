@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book it! - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2; 
+            color: #333; 
+        }
+        header {
+            background-color: #2ecc71; 
+            color: #fff; 
+            padding: 10px 20px;
+            text-align: center;
+            position: relative; 
+        }
+        nav {
+            background-color: #27ae60; 
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        nav a:hover {
+            background-color: #2ecc71; 
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 970px;
+            padding: 0 20px;
+            background-color: #fff; 
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+        .logo {
+            border-radius: 75%;
+            width: 200px;
+            height: 150px;
+        }
+        .accommodation {
+            display: inline-block;
+            width: 300px;
+            height: 400px;
+            margin: 10px;
+            vertical-align: top; 
+        }
+        .accommodation h3 {
+            margin-top: 0; 
+        }
+        .accommodation p {
+            margin-bottom: 10px; 
+        }
+        .bali {
+            width: 300px;
+            height: 200px;
+        }
+        .newyork {
+            width: 300px;
+            height: 200px;
+        }
+        .alps {
+            width: 300px;
+            height: 200px;
+        }
+        footer {
+            background-color: #2ecc71; 
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .success-message {
+            display: none;
+            color: green;
+            margin-top: 10px;
+        }
+        .account-picture {
+            position: absolute;
+            top: calc(100% - 75px);
+            right: 20px; 
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="submit"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus,
+        input[type="date"]:focus,
+        input[type="submit"]:hover {
+            border-color: #2ecc71;
+        }
+        input[type="submit"] {
+            background-color: #2ecc71;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="logo.png" alt="Book it! Logo">
+        <img class="account-picture" src="account-picture.jpg" alt="Account Picture" onclick="redirectToAccount()">
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a> 
+        <a href="Contactus.html">Contact Us</a>
+    </nav>
+    <div class="container">
+        <h2>Welcome to Book it!</h2>
+        <p>Find your perfect accommodation and start your adventure!</p>
+        <form action="search.php" method="get">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter location" required>
+            <label for="check-in">Check-in date:</label>
+            <input type="date" id="check-in" name="check-in" required>
+            <label for="check-out">Check-out date:</label>
+            <input type="date" id="check-out" name="check-out" required>
+            <input type="submit" value="Search">
+        </form>
+        <h2>Featured Accommodations</h2>
+        <div class="accommodation">
+            <h3>Beachfront Villa in Bali</h3>
+            <img class="bali" src="bali.jpg" alt="Beachfront Villa in Bali" width="300">
+            <p id="villabali">Relax in luxury at this stunning villa overlooking the ocean.</p>
+            <p>From </p>
+            <h1>R29990</h1>
+        </div>
+        <div class="accommodation">
+            <h3>Mountain Lodge Swiss Alps</h3>
+            <img class="alps" src="alps.jpg" alt="Mountain Lodge in the Swiss Alps" width="300">
+            <p id="Swiss">Experience the beauty of the Swiss Alps with a cozy stay in this mountain lodge.</p>
+            <p>From </p>
+            <h1>R42990</h1>
+        </div>
+        <div class="accommodation">
+            <h3>City Apartment in New York</h3>
+            <img class="newyork" src="newyork.jpg" alt="City Apartment in New York" width="300">
+            <p id="Explore">Explore the vibrant city life of New York from the comfort of this stylish apartment.</p>
+            <p>From </p>
+            <h1>R27990</h1>
+        </div>
+    </div>
+
+    <script>
+        function redirectToAccount() {
+            window.location.href = 'account.html'; 
+        }
+    </script>
+</body>
+</html>

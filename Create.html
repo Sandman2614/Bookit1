@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Book it!</title>
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2; 
+            color: #333; 
+        }
+        header {
+            background-color: #2ecc71; 
+            color: #fff; 
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #27ae60; 
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        nav a:hover {
+            background-color: #2ecc71; 
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 970px;
+            padding: 0 20px;
+            background-color: #fff; 
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+      .logo{border-radius: 75%;
+    width: 200px;
+    height: 150px;
+      }
+      .accommodation {
+            display: inline-block;
+            width: 300px;
+            height: 400px;
+            margin: 10px;
+            vertical-align: top; 
+        }
+
+        .accommodation h3 {
+            margin-top: 0; 
+            
+        }
+
+        .accommodation p {
+            margin-bottom: 10px; 
+        }
+        .bali{width: 300px;
+        height: 200px;
+        }
+
+        .newyork{width: 300px;
+            height: 200px;
+        }
+
+        .alps{width: 300px;
+            height: 200px;
+        }
+        footer {
+            background-color: #2ecc71; 
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #2ecc71;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #27ae60;
+        }
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+        p a {
+            color: #2ecc71;
+            text-decoration: none;
+        }
+        p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="logo.png" alt="Book it! Logo" width="100">
+        <h1>Book it!</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="login.html">Login</a> 
+        <a href="Contactus.html">Contact Us</a>
+    </nav>
+    <div class="container">
+        <h2>Create Account</h2>
+        <form action="register.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+
+            <input type="submit" value="Create Account">
+        </form>
+        <div class="success-message" id="success-message">Account successfully created!</div>
+    </div>
+
+    <script>
+        function showSuccessMessage() {
+            document.getElementById("success-message").style.display = "block";
+        }
+    </script>
+    </div>
+</body>
+</html>
